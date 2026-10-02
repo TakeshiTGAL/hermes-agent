@@ -1,0 +1,22 @@
+name: jp-lineworks
+repo: https://github.com/TakeshiTGAL/hermes-plugin-lineworks
+sha: 544a7aaac48e8cae36bae0ecc23d86d47a091386
+description: "Talk to Hermes from LINE WORKS, built on the LINE WORKS API 2.0: staff open a 1:1 talk with a bot or @mention it in a group talk, and Hermes answers in the talk. hermes lineworks-jp setup creates and enables the bot through the API; hermes lineworks-jp callback points it at a Cloudflare quick tunnel or your own HTTPS host. New people need a pairing approval by default, and only the bot's administrators and LINEWORKS_JP_ALLOWED_USERS can use Hermes commands beyond /help, /whoami, /new and /reset or answer approvals. Disclosure: talks to auth.worksmobile.com and www.worksapis.com (attachments on worksmobile.com hosts); while the gateway runs, listens on port 8647 at /lineworks/callback and drops any callback without a valid X-WORKS-Signature; setup writes the bot's ID and secret to the profile's .env and turns off host and shared-data toolsets for this platform."
+maintainer: TakeshiTGAL
+tier: community
+category: platform
+docs_url: https://github.com/TakeshiTGAL/hermes-plugin-lineworks#readme
+version: "0.1.0"
+requires_hermes: ">=0.21.5"
+platforms: []
+capabilities:
+  provides_tools: []
+  provides_hooks: []
+  provides_middleware: []
+  requires_env:
+  - LINEWORKS_JP_CLIENT_ID
+  - LINEWORKS_JP_CLIENT_SECRET
+  - LINEWORKS_JP_SERVICE_ACCOUNT
+  - LINEWORKS_JP_PRIVATE_KEY_PATH
+  - LINEWORKS_JP_BOT_ID
+  - LINEWORKS_JP_BOT_SECRET
