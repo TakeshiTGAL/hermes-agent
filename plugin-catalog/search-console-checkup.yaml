@@ -1,0 +1,23 @@
+name: search-console-checkup
+repo: https://github.com/TakeshiTGAL/hermes-plugin-search-console
+sha: aed58af974c9fc1fb3285dab964fca388d14762a
+description: "Weekly SEO check of your own site, built on the Google Search Console API: it compares only finished days and names the 3 fixes worth doing first (pages that left Google's index, titles seen but not clicked, queries that dropped), plus audit, rank changes, raw queries and URL Inspection. The weekly check runs as a script-only Hermes cron job with no model call. Disclosure: read-only requests to Google's Search Console API and Google's OAuth token endpoint only, signed with your own service-account JSON key (or your own OAuth authorized_user file) named in GSC_CREDENTIALS_FILE; `schedule` writes one script to $HERMES_HOME/scripts/ that holds the plugin and key-file paths, not the key, and prints the `hermes cron create` line for you to run (remove with `hermes cron remove`); depends on google-auth and requests; no telemetry."
+maintainer: TakeshiTGAL
+tier: community
+category: tools
+docs_url: https://github.com/TakeshiTGAL/hermes-plugin-search-console#readme
+version: "0.1.0"
+requires_hermes: ">=0.21.5"
+platforms: []
+capabilities:
+  provides_tools:
+  - gsc_weekly_report
+  - gsc_audit
+  - gsc_rank_changes
+  - gsc_query
+  - gsc_inspect_url
+  - gsc_sites
+  provides_hooks: []
+  provides_middleware: []
+  requires_env:
+  - GSC_CREDENTIALS_FILE
