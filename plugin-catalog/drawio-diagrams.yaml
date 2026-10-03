@@ -1,0 +1,20 @@
+name: drawio-diagrams
+repo: https://github.com/TakeshiTGAL/hermes-plugin-drawio
+sha: 72fe17ad8fabb20eb776697a11ed2647d066999b
+description: "Create, read, edit and export diagrams built on the open draw.io file format: flowcharts with swimlanes, architecture, org charts and sequence diagrams from a plain description, laid out by the plugin and checked after every create and edit; edits keep every id, move only what an operation names or what sits downstream of an insertion, and redraw only the connectors they re-attached or broke; PNG, SVG and PDF with or without draw.io Desktop; Japanese labels render correctly. Disclosure: no network calls, no credentials; writes .drawio/.xml diagrams and the images next to them through the Hermes write guard (default HERMES_HOME/cache/generated/drawio), and copies replaced diagrams to HERMES_HOME/cache/drawio-backups (last 30, not through the guard); reads diagrams through the Hermes read guard, plus system font files; runs the draw.io Desktop CLI as a subprocess only when it is installed."
+maintainer: TakeshiTGAL
+tier: community
+category: tools
+docs_url: https://github.com/TakeshiTGAL/hermes-plugin-drawio#readme
+version: "0.1.0"
+requires_hermes: ">=0.21.4"
+platforms: []
+capabilities:
+  provides_tools:
+  - drawio_create
+  - drawio_read
+  - drawio_edit
+  - drawio_export
+  provides_hooks: []
+  provides_middleware: []
+  requires_env: []
